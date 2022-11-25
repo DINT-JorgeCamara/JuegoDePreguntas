@@ -1,0 +1,123 @@
+﻿<Window x:Class="JuegoDePreguntas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JuegoDePreguntas"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <TabControl>
+        <TabItem x:Name="Jugar">
+            <TabItem.Header>
+                <TextBlock>Jugar</TextBlock>
+            </TabItem.Header>
+            <UniformGrid Rows="2" Columns="2">
+                <DockPanel>
+                    <Image DockPanel.Dock="Top"/>
+                    <TextBlock DockPanel.Dock="Top" Text="categoria de la imagen"/>
+                    <Image/>
+                </DockPanel>
+                <GroupBox Header="Categorías">
+                    <ListBox></ListBox>
+                </GroupBox>
+                <StackPanel>
+                    <TextBlock Text="Texto pregunta"/>
+                    <TextBlock Text="Respuesta: "/>
+                    <DockPanel>
+                        <Button Content="Validar" DockPanel.Dock="Right"/>
+                        <TextBox></TextBox>
+                    </DockPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Ver pista/Ocultar pista</TextBlock>
+                        <Expander>
+                            <TextBlock> Pista</TextBlock>
+                        </Expander>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock>Dificultad: </TextBlock>
+                    <ComboBox>
+                        
+                    </ComboBox>
+                    <Button>Nueva partida</Button>
+                </StackPanel>
+            </UniformGrid>
+
+        </TabItem>
+        <TabItem x:Name="GestionDePreguntas">
+            <TabItem.Header>
+                <TextBlock>Gestionar preguntas</TextBlock>
+            </TabItem.Header>
+            <DockPanel>
+                <DockPanel DockPanel.Dock="Right" LastChildFill="False">
+                    <Button DockPanel.Dock="Top" Content="Cargar de JSON"/>
+                    <Button DockPanel.Dock="Top" Content="Guardar en JSON"/>
+                    <Button DockPanel.Dock="Top" Content="Eliminar pregunta"/>
+                    <Button DockPanel.Dock="Bottom" Content="Examinar"/>
+                </DockPanel>
+                <StackPanel DockPanel.Dock="Bottom">
+                    <DockPanel>
+                        <TextBlock>Pregunta</TextBlock>
+                        <TextBox/>
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock>Respuesta</TextBlock>
+                        <TextBox/>
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock>Imagen</TextBlock>
+                        <TextBox/>
+                    </DockPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Nivel de dificultad</TextBlock>
+                        <ComboBox></ComboBox>
+                        <TextBlock>Categoria</TextBlock>
+                        <ComboBox></ComboBox>
+                    </StackPanel>
+                </StackPanel>
+                <ListBox>
+
+                </ListBox>
+            </DockPanel>
+        </TabItem>
+        
+        <TabItem x:Name="AñadirPregunta">
+            <TabItem.Header>
+                <TextBlock>Añadir pregunta</TextBlock>
+            </TabItem.Header>
+            <DockPanel>
+                <DockPanel DockPanel.Dock="Right" LastChildFill="False">
+                    <Button DockPanel.Dock="Top" Content="Añadir pregunta"/>
+                    <Button DockPanel.Dock="Top" Content="Limpiar formulario"/>
+                    <Button DockPanel.Dock="Bottom" Content="Examinar"/>
+                </DockPanel>
+                <StackPanel DockPanel.Dock="Bottom">
+                    <DockPanel>
+                        <TextBlock>Pregunta</TextBlock>
+                        <TextBox/>
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock>Respuesta</TextBlock>
+                        <TextBox/>
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock>Imagen</TextBlock>
+                        <TextBox/>
+                    </DockPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Nivel de dificultad</TextBlock>
+                        <ComboBox></ComboBox>
+                        <TextBlock>Categoria</TextBlock>
+                        <ComboBox></ComboBox>
+                    </StackPanel>
+                </StackPanel>
+                <Image/>
+            </DockPanel>
+        </TabItem>
+    </TabControl>
+</Window>
