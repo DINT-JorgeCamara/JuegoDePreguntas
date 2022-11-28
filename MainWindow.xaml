@@ -90,33 +90,33 @@
             <TabItem.Header>
                 <TextBlock>Añadir pregunta</TextBlock>
             </TabItem.Header>
-            <DockPanel>
+            <DockPanel DataContext="{Binding Path=NuevaPregunta}">
                 <DockPanel DockPanel.Dock="Right" LastChildFill="False">
-                    <Button DockPanel.Dock="Top" Content="Añadir pregunta"/>
-                    <Button DockPanel.Dock="Top" Content="Limpiar formulario"/>
-                    <Button DockPanel.Dock="Bottom" Content="Examinar"/>
+                    <Button DockPanel.Dock="Top" Content="Añadir pregunta" Click="AñadirPregunta_BtnClick"/>
+                    <Button DockPanel.Dock="Top" Content="Limpiar formulario" Click="LimpiaFormulario_BtnClick"/>
+                    <Button DockPanel.Dock="Bottom" Content="Examinar" Click="Examinar_BtnClick"/>
                 </DockPanel>
                 <StackPanel DockPanel.Dock="Bottom">
                     <DockPanel>
                         <TextBlock>Pregunta</TextBlock>
-                        <TextBox/>
+                        <TextBox x:Name="preguntaTextBox" Text="{Binding Path=TextoPregunta}"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock>Respuesta</TextBlock>
-                        <TextBox/>
+                        <TextBox x:Name="respuestaTextBox" Text="{Binding Path=Respuesta}"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock>Imagen</TextBlock>
-                        <TextBox/>
+                        <TextBox x:Name="imagenTextBox" Text="{Binding Path=Imagen, Mode=TwoWay}"/>
                     </DockPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>Nivel de dificultad</TextBlock>
-                        <ComboBox></ComboBox>
+                        <ComboBox x:Name="dificultadComboBox"></ComboBox>
                         <TextBlock>Categoria</TextBlock>
-                        <ComboBox></ComboBox>
+                        <ComboBox x:Name="categoriasComboBox"></ComboBox>
                     </StackPanel>
                 </StackPanel>
-                <Image/>
+                <Image Source="{Binding Path=Imagen}"/>
             </DockPanel>
         </TabItem>
     </TabControl>
