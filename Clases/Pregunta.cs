@@ -6,32 +6,35 @@ namespace JuegoDePreguntas.Clases
     class Pregunta : ObservableObject
     {
         private string textoPregunta;
-        private string TextoPregunta
+        public string TextoPregunta
         {
             get { return textoPregunta; }
             set { SetProperty(ref textoPregunta, value); }
         }
 
         private string respuesta;
-        private string Respuesta
+        public string Respuesta
         {
             get { return respuesta; }
             set { SetProperty(ref respuesta, value); }
         }
+
         private string categoria;
-        private string Categoria
+        public string Categoria
         {
             get { return categoria; }
             set { SetProperty(ref categoria, value); }
         }
+
         private string dificultad;
-        private string Dificultad
+        public string Dificultad
         {
             get { return dificultad; }
             set { SetProperty(ref dificultad, value); }
         }
+        
         private string imagen;
-        private string Imagen
+        public string Imagen
         {
             get { return imagen; }
             set { SetProperty(ref imagen, value); }

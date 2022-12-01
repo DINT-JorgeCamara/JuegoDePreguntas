@@ -12,5 +12,7 @@ namespace JuegoDePreguntas.Clases
             set { SetProperty(ref preguntas, value); }
         }
 
+
+
     }
 }

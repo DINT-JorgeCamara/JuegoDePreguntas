@@ -86,6 +86,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Servicios\ServicioAzure.cs" />
+    <Compile Include="Servicios\ServicioDialogo.cs" />
+    <Compile Include="Servicios\ServicioJSON.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

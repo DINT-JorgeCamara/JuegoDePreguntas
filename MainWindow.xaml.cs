@@ -20,14 +20,14 @@ namespace JuegoDePreguntas
             vm.LimpiaFormulario_BtnClick();
         }
 
-        private void Examinar_BtnClick(object sender, RoutedEventArgs e)
+        private void ExaminarImagen_BtnClick(object sender, RoutedEventArgs e)
         {
-            vm.Examinar_BtnClick();
+            vm.ExaminarImagen();
         }
 
         private void AñadirPregunta_BtnClick(object sender, RoutedEventArgs e)
         {
-            vm.AñadirPregunta_BtnClick();
+            vm.AñadirPregunta();
         }
     }
 }
